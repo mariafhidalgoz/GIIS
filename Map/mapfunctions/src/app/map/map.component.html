@@ -1,0 +1,6 @@
+<div id="map" class="map"></div>
+<!-- <app-airports (receivedata)="markers($event,lon,lat)" ></app-airports>-->
+<app-zoomout (receivedata)="zoomout($event)" ></app-zoomout>
+<button (click)="extent($event)">Home</button>
+<app-drawline (receivedata)="drawline($event)"></app-drawline>
+<app-drawpolygon (receivedata)="drawpolygon($event)"></app-drawpolygon>
