@@ -9,13 +9,18 @@
 node_modules
 
 # IDEs and editors
-.idea
 .project
 .classpath
 .c9/
 *.launch
 .settings/
 *.sublime-workspace
+
+# Django
+**/__pycache__/*
+
+# IDE - JetBrains
+**/.idea/*
 
 # IDE - VSCode
 Map/.vscode/launch.json
@@ -37,3 +42,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Env
+venv
