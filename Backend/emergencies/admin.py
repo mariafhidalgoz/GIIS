@@ -12,4 +12,5 @@ admin.site.register(Incident)
 
 @admin.register(PoliceStation)
 class PoliceStationAdmin(OSMGeoAdmin):
+
     list_display = ('name', 'contact_name', 'contact_phone', 'location')
