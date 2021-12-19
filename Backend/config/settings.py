@@ -31,7 +31,6 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'rest_framework', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,18 +39,23 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # This is to use geodjango
     'django.contrib.gis',
-    'crime'
+    # These are to create the API
+    'rest_framework',
+    'corsheaders',
+    # This is our app for emergencies
+    'emergencies',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # This is for the API
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -79,15 +83,14 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    
     'default': {
-        'NAME': 'GIIS',
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'emergencies',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost',
         'PORT': '5432'
-    },
+    }
 }
 
 
@@ -128,8 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-GDAL_LIBRARY_PATH='C:/GIIS/GIIS/GIIS/venv/Lib/site-packages/osgeo/gdal303.dll'
-GEOS_LIBRARY_PATH='C:/GIIS/GIIS/GIIS/venv/Lib/site-packages/osgeo/geos_c.dll'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
