@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$!vw6+*upej_v1f+er63#t+sae4fk^h_c3tx^j=mtiw3kv9lp(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,7 +40,10 @@ INSTALLED_APPS = [
 
     # This is to use geodjango
     'django.contrib.gis',
-
+    # These are to create the API
+    'rest_framework',
+    'corsheaders',
+    # This is our app for emergencies
     'emergencies',
 ]
 
@@ -52,6 +55,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # This is for the API
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
