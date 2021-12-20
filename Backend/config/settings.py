@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     # These are to create the API
     'rest_framework',
+    'rest_framework_gis',
     'corsheaders',
     # This is our app for emergencies
     'emergencies',
@@ -136,3 +137,5 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ORIGIN_ALLOW_ALL = True

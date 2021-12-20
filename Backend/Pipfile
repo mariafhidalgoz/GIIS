@@ -10,6 +10,7 @@ pyproj = "==3.0.1"
 psycopg2 = "==2.9.2"
 djangorestframework = "==3.13.1"
 django-cors-headers = "==3.10.1"
+djangorestframework-gis = "*"
 
 [dev-packages]
 

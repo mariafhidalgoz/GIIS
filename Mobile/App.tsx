@@ -117,7 +117,7 @@ export default function App() {
       return;
 
     // Parameter object
-    const alertPoint = `POINT(${location.coords.latitude} ${location.coords.longitude})`
+    const alertPoint = `POINT(${location.coords.longitude} ${location.coords.latitude})`
     const date = new Date(location.timestamp)
 
     const params = {

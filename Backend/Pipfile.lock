@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "93e2f560322b0fb322da73f6af4c9eb2535f16838806a1e9a4037772819997b6"
+            "sha256": "659e6da0b6ec0ecf9d77e9b1b9a22761389d528d8a8b837f93fbef68f3f83db1"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -54,6 +54,14 @@
             ],
             "index": "pypi",
             "version": "==3.13.1"
+        },
+        "djangorestframework-gis": {
+            "hashes": [
+                "sha256:5be17e27cf2be33ac6119e6d2206d3d81183c62d03aaa9b814ce95a82256614f",
+                "sha256:d3b6aa6beef32f75811f815bda3bc7e9ea5d2f0306f9741cad5f3820d3973be7"
+            ],
+            "index": "pypi",
+            "version": "==0.17"
         },
         "psycopg2": {
             "hashes": [
